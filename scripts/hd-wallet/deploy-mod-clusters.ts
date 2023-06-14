@@ -19,12 +19,6 @@ async function deploy() {
   const ssvClustersMod = await ssvClustersModFactory.deploy();
   await ssvClustersMod.deployed();
   console.log(`SSVClusters module deployed to: ${ssvClustersMod.address}`);
-
-  const ssvNetwork = await ssvNetworkFactory.attach(proxyAddress);
-
-  await ssvNetwork.upgradeModule(ssvModules.SSV_CLUSTERS, ssvClustersMod.address);
-  console.log(`SSVClsuters module attached to SSVNetwork succesfully`);
-
 }
 
 deploy()
