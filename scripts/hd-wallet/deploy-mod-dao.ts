@@ -14,6 +14,10 @@ async function deploy() {
     gasPrice: 300000000000,
     gas: 5000000
   });
+
+  console.log('--------- ssvDAOMod deployment details ------------');
+  console.log(ssvDAOMod.deployTransaction);
+
   await ssvDAOMod.deployed();
   console.log(`SSVDAO module deployed to: ${ssvDAOMod.address}`);
 }
