@@ -24,6 +24,8 @@
     "size-contracts": "npx hardhat size-contracts"
   },
   "devDependencies": {
+    "@ethersproject/hardware-wallets": "^5.7.0",
+    "@ledgerhq/hw-transport-node-hid": "^6.27.15",
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
     "@nomiclabs/hardhat-ethers": "^2.2.3",
     "@nomiclabs/hardhat-solhint": "^2.0.0",
