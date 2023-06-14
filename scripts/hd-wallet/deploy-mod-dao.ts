@@ -7,15 +7,15 @@ async function deploy() {
   console.log(`Deploying contracts with the account:${await signer.getAddress()}`);
 
   // Initialize contract
-  const ssvClustersModFactory = await ethers.getContractFactory('SSVClusters', signer);
+  const ssvDAOModFactory = await ethers.getContractFactory('SSVDAO', signer);
 
   // Deploy ssvClustersMod
-  const ssvClustersMod = await ssvClustersModFactory.deploy({
+  const ssvDAOMod = await ssvDAOModFactory.deploy({
     gasPrice: 300000000000,
     gas: 5000000
   });
-  await ssvClustersMod.deployed();
-  console.log(`SSVClusters module deployed to: ${ssvClustersMod.address}`);
+  await ssvDAOMod.deployed();
+  console.log(`SSVDAO module deployed to: ${ssvDAOMod.address}`);
 }
 
 deploy()
